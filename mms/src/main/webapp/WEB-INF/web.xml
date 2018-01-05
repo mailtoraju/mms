@@ -1,0 +1,62 @@
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>CustomerLogin</servlet-name>
+  	<display-name>CustomerLogin</display-name>
+  	<description></description>
+  	<servlet-class>com.cusat.servlets.CustomerLogin</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AccessUserFsMappingDetails</servlet-name>
+  	<display-name>AccessUserFsMappingDetails</display-name>
+  	<description></description>
+  	<servlet-class>com.cusat.servlets.AccessUserFsMappingDetails</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>Payment</display-name>
+  	<servlet-name>Payment</servlet-name>
+  	<servlet-class>com.cusat.servlets.Payment</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>Entry</display-name>
+  	<servlet-name>Entry</servlet-name>
+  	<servlet-class>com.cusat.servlets.Entry</servlet-class>
+  </servlet>
+   <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+  <servlet-mapping>
+  	<servlet-name>CustomerLogin</servlet-name>
+  	<url-pattern>/customer_login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AccessUserFsMappingDetails</servlet-name>
+  	<url-pattern>/access_user_fs_mapping_details</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Payment</servlet-name>
+  	<url-pattern>/Payment</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Entry</servlet-name>
+  	<url-pattern>/entry</url-pattern>
+  </servlet-mapping>
+    
+  <filter>
+  	<description>
+  	</description>
+  	<display-name>AuthenticationFilter</display-name>
+  	<filter-name>AuthenticationFilter</filter-name>
+  	<filter-class>com.cusat.filter.AuthenticationFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>AuthenticationFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+</web-app>
